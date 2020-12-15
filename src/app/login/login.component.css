@@ -1,0 +1,175 @@
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family:"Roboto", sans-serif;
+}
+
+header{
+  position:fixed;
+  background: #22242A;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 60px;
+  z-index: 1;
+}
+
+.left-area h3{
+  color: #fff;
+  margin-top: -30px;
+  margin-left: 60px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+
+.logout_btn{
+  padding: 5px;
+  background: #19B3D3;
+  text-decoration: none;
+  float: right;
+  margin-top: -30px;
+  margin-right: 2%;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+
+.logout_btn:hover{
+  background: #0D9DBB;
+}
+
+
+.sidebar{
+  z-index: 1;
+  top: 0;
+  background: #2F323A;
+  margin-top: 60px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 7%);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+
+
+.sidebar .profile_info .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  margin-left:25%;
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #19B3D3;
+}
+
+.sidebar i{
+  padding-right: 10px;
+}
+
+label #sidebar_btn{
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 25px;
+  font-size: 20px;
+  margin-top: -10px;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover{
+  color: #19B3D3;
+}
+
+
+#check:checked ~ .sidebar{
+  left: -185px;
+}
+
+#check:checked ~ .sidebar a span{
+  display: none;
+}
+
+#check:checked ~ .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  width: (100% - 250px);
+  /* margin-top: 60px; */
+  padding: 20px;
+  margin-left: 250px;
+  background: url(https://miro.medium.com/max/12502/1*09PYj2KQ8fDLHlV0BPE7_A.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+
+#check:checked ~ .sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+.profile_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: 30px;
+  align-items: 30px;
+}
+
+.form-login {
+  background-color: rgba(0,0,0,0.55);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border-color:#d2d2d2;
+  border-width: 5px;
+  color:white;
+  box-shadow:0 1px 0 #cfcfcf;
+  margin-top: 50%;
+
+}

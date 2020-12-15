@@ -1,0 +1,213 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- SCRIPTS -->
+    <script src="../js/accuweather.js"></script>
+    <!-- SCRIPTS -->
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left-area">
+        <h3>Agri<span style="color:#19B3D3">Tech</span></h3>
+      </div>
+      <div class="right-area">
+        <a href="#" class="logout_btn">Logout</a>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="https://img.thrfun.com/img/007/595/tree_winter_x5.jpg" alt="" class="profile_image">
+      </div>
+      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!-- sidebar -->
+
+    <div class="content">
+      <!-- main body -->
+      <!-- =============================================================================== -->
+
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fas fa-humidity fa-4x" id="humidity"></i>
+                </div>
+              <div class="col">
+                <h3 class="display-3">08</h3>
+                <h6>Humidity</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fas fa-temperature-high fa-4x" id="temperature"></i>
+                </div>
+              <div class="col">
+                <h3 class="display-3">32</h3>
+                <h6>Temperature</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fas fa-sun fa-4x" id="sunlight"></i>
+                </div>
+              <div class="col">
+                <h3 class="display-3">10</h3>
+                <h6>Sun light</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img class="dashboardpng" src="../../assets/npk.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3">10</h3>
+                <h6>NPK</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img class="dashboardpng" src="../../assets/alien.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3">00</h3>
+                <h6>Intrusion Detection</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img id="waetherPic" class="dashboardpng" src="../../assets/sun.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="actualTemperature">00</h3>
+                <h6>AccuWeather</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-primary">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      <!-- =============================================================================== -->
+
+    </div>
+  </body>
+</html>
