@@ -91,11 +91,14 @@ export class DashboardComponent implements OnInit {
     if (shortPhrase[0].indexOf("t-storm") != -1){
       (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
     }
-    else if(shortPhrase[0].indexOf("shower") != -1){
+    else if((shortPhrase[0].indexOf("shower") != -1) || (shortPhrase[0].indexOf("rain") != -1)){
       (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/rainny.png';
     }
-    else if(shortPhrase[0].indexOf("sunny") != -1){
+    else if((shortPhrase[0].indexOf("sunny") != -1) || (shortPhrase[0].indexOf("sun") != -1)){
       (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/sun.png';
+    }
+    else if(shortPhrase[0].indexOf("clouds and sun") != -1){
+      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
     }
 
     // if (shortPhrase[0]==="A morning t-storm in the area"){

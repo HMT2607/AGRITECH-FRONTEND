@@ -5,6 +5,8 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ManageVegComponent } from './manage-veg/manage-veg.component';
+import { HumidityDetailsComponent } from './humidity-details/humidity-details.component';
+import { ForecastComponent } from './forecast/forecast.component';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { ManageVegComponent } from './manage-veg/manage-veg.component';
     AppComponent,
     routingComponents,
     LoginComponent,
-    ManageVegComponent
+    ManageVegComponent,
+    HumidityDetailsComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,

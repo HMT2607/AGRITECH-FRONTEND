@@ -166,14 +166,9 @@ label #sidebar_btn:hover{
   align-items: 30px;
 }
 
-.text-p{
-  text-decoration: none;
-  color: #fff;
-}
 
-.text-p:hover{
-  color:#185202;
-}
+
+
 
 .card{
   margin-top: 25%;
@@ -186,26 +181,15 @@ label #sidebar_btn:hover{
 
 }
 
-
-
-#humidity{
-  color:#78e6ff;
-}
-
-
-#sunlight{
-  color: #fffc30;
-}
-
-
-#temperature{
-  color:#fa7c41;
-}
-
 .dashboardpng{
   width: 80px;
 }
 
 
 
-
+#Htable{
+  margin-top: 60px;
+  margin-right: 12px;
+  background: rgba(34, 36, 42, 0.4);
+  border-radius: 40px;
+}

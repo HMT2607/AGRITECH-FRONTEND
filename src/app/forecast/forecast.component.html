@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- SCRIPTS -->
+    <script src="../js/accuweather.js"></script>
+    <!-- SCRIPTS -->
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left-area">
+        <h3>Agri<span style="color:#1b6101">Tech</span></h3>
+      </div>
+      <div class="right-area">
+        <a href="#" class="logout_btn">Logout</a>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
+      </div>
+      <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!-- sidebar -->
+
+    <div class="content">
+      <!-- main body -->
+      <!-- =============================================================================== -->
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <img id="waetherPic" class="dashboardpng" src="../../assets/sun.png"/>
+                  </div>
+                <div class="col">
+                  <h3 class="display-3" id="actualTemperature">00</h3>
+                  <h6>Current Weather</h6>
+                </div>
+                </div>
+              </div>
+          </div>
+
+
+
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img id="3hforecast" class="dashboardpng" src="../../assets/sun.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="3hTemperature">00</h3>
+                <h6>3h Forecast Weather</h6>
+              </div>
+              </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-3">
+
+        </div>
+
+
+        <div class="col" id="Htable">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Forecast</th>
+                <th scope="col">Avg-Temperature</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let data of userdata">
+                    <td>{{data.date}}</td>
+                    <td>{{data.weather}}</td>
+                    <td>{{data.Temp}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-md-3">
+
+        </div>
+        </div>
+      <!-- =============================================================================== -->
+
+    </div>
+  </body>
+</html>
