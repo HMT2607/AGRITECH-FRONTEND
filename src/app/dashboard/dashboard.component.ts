@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 import { element } from 'protractor';
 
 @Component({
@@ -8,11 +12,114 @@ import { element } from 'protractor';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router, private http: HttpClient) { }
+  intrusionDataArray:Array<any> = [];
 
   ngOnInit(): void {
-    this.helloWorld();
+    this.checkSession();
+    this.liveHumidityData();
+    this.liveSensorNodeData();
+    this.intrusionData();
   }
+
+//Logout is triggered - Start//
+  logout() {
+    sessionStorage.clear();
+    this.router.navigate(['login']);
+  }
+//Logout is triggered - End//
+
+//Check user session - Start//
+  checkSession() {
+    let sessionId = sessionStorage.getItem("id"); 
+    console.log(sessionId);
+    console.log("helo");
+    if ((sessionId == "") || (sessionId == null)){
+      this.router.navigate(['login']);
+    }else{
+      this.helloWorld();
+    }
+  }
+//Check user session - End//
+
+//Get latest humidity data from API - Start//
+  getHumidityData() :Observable<any>{
+    return this.http.get("http://127.0.0.1:8000/tempAndHumidity/")
+  }
+
+  liveHumidityData() {
+    this.getHumidityData().subscribe(
+      (response)=>{
+          var data = [];     
+          for (let i = response.length - 1; i >= 1; i--) {
+              let obj = response[i];
+              data.push(obj);
+          }
+          (document.getElementById('humidityData') as HTMLHeadingElement).textContent = data[0].humidity;
+          (document.getElementById('tempData') as HTMLHeadingElement).textContent = data[0].temperature+"°";
+      },
+    );
+  }
+//Get latest humidity data from API - End//
+
+//Get latest sensor data from API - Start//
+getSensorNodeData() :Observable<any>{
+  return this.http.get("http://127.0.0.1:8000/sensorNode/")
+}
+
+liveSensorNodeData() {
+  this.getSensorNodeData().subscribe(
+    (response)=>{
+        var data = [];     
+        for (let i = response.length - 1; i >= 1; i--) {
+            let obj = response[i];
+            data.push(obj);
+        }
+        console.log(data);
+        (document.getElementById('nData') as HTMLHeadingElement).textContent = data[0].N;
+        (document.getElementById('pData') as HTMLHeadingElement).textContent = data[0].P;
+        (document.getElementById('kData') as HTMLHeadingElement).textContent = data[0].K;
+        (document.getElementById('sunlightData') as HTMLHeadingElement).textContent = data[0].light;
+    },
+  );
+}
+
+//Check intrusion - Start//
+getIntrusionData() :Observable<any>{
+  return this.http.get("https://jsonplaceholder.typicode.com/posts")
+}
+
+getNotifyBySms() :Observable<any>{
+  return this.http.get("http://127.0.0.1:8000/notify/")
+}
+
+getNotifyByEmail() :Observable<any>{
+  return this.http.get("http://127.0.0.1:8000/sendEmail/")
+}
+
+intrusionData() {
+  this.getIntrusionData().subscribe(
+    (response)=>{   
+        for (let i = response.length - 1; i >= 1; i--) {
+            let obj = response[i];
+            this.intrusionDataArray.push(obj);
+        }
+        //let intruParam = 1;
+        let intruParam = this.intrusionDataArray[0].userId;
+        (document.getElementById('intruData') as HTMLHeadingElement).textContent = intruParam.toString();
+        if (intruParam == 1) {
+
+          this.getNotifyByEmail().subscribe(
+            (response)=>{console.log(response)},
+          ); 
+          
+        }
+    },
+  ); 
+}
+//Check intrusion - End//
+
+//Get latest sensor data from API - End//
 
   helloWorld() {
     let data  = '';
@@ -42,16 +149,7 @@ export class DashboardComponent implements OnInit {
 
         // console.log(loc_key[0]);
 
-
-
-
-
-
-
-
-
-
-        fetch("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+loc_key[0]+"?apikey="+API+"&details=true")
+fetch("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+loc_key[0]+"?apikey="+API+"&details=true")
   .then(function(response) {
     return response.json();
   })
@@ -100,46 +198,8 @@ export class DashboardComponent implements OnInit {
     else if(shortPhrase[0].indexOf("clouds and sun") != -1){
       (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
     }
-
-    // if (shortPhrase[0]==="A morning t-storm in the area"){
-    //   (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
-    // }
-
-
-    // (document.getElementById('zxs') as HTMLImageElement).src = '../../assets/npk.png';
-
-    // let testzx = "../../assets/alien.png";
-
-    //Object.entries(x).forEach(([key, value]) => console.log(`${value}`['date']));
-    //var phaseValueArr = obj.phaseExecutions.PRE.map(x => x.phaseValue);
-
-
-    //var phaseValueArr = x.phaseExecutions.Temperature.map(z => z.phaseValue);
-
-  //   myJson["DailyForecasts"].forEach(obj => {
-  //     Object.entries(obj).forEach(([key, value]) => {
-  //         console.log(`${key} ${value}`);
-  //     });
-  //     console.log('-------------------');
-  // });
   });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     );}}
 

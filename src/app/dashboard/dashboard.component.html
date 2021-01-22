@@ -18,7 +18,7 @@
         <h3>Agri<span style="color:#1b6101">Tech</span></h3>
       </div>
       <div class="right-area">
-        <a href="#" class="logout_btn">Logout</a>
+        <a href="#" (click)="logout()" class="logout_btn">Logout</a>
       </div>
     </header>
 
@@ -51,7 +51,7 @@
                   <i class="fas fa-humidity fa-4x" id="humidity"></i>
                 </div>
               <div class="col">
-                <h3 class="display-3">08</h3>
+                <h3 class="display-3" id="humidityData"></h3>
                 <h6>Humidity</h6>
               </div>
               </div>
@@ -77,7 +77,7 @@
                   <i class="fas fa-temperature-high fa-4x" id="temperature"></i>
                 </div>
               <div class="col">
-                <h3 class="display-3">32</h3>
+                <h3 class="display-3" id="tempData"></h3>
                 <h6>Temperature</h6>
               </div>
               </div>
@@ -103,7 +103,7 @@
                   <i class="fas fa-sun fa-4x" id="sunlight"></i>
                 </div>
               <div class="col">
-                <h3 class="display-3">10</h3>
+                <h3 class="display-3" id="sunlightData"></h3>
                 <h6>Sun light</h6>
               </div>
               </div>
@@ -129,8 +129,56 @@
                   <img class="dashboardpng" src="../../assets/npk.png"/>
                 </div>
               <div class="col">
-                <h3 class="display-3">10</h3>
-                <h6>NPK</h6>
+                <h3 class="display-3" id="nData">10</h3>
+                <h6>N</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img class="dashboardpng" src="../../assets/npk.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="pData">10</h3>
+                <h6>P</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img class="dashboardpng" src="../../assets/npk.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="kData">10</h3>
+                <h6>K</h6>
               </div>
               </div>
             </div>
@@ -154,7 +202,7 @@
                   <img class="dashboardpng" src="../../assets/intruder.png"/>
                 </div>
               <div class="col">
-                <h3 class="display-3">00</h3>
+                <h3 class="display-3" id="intruData">00</h3>
                 <h6>Intrusion Alert</h6>
               </div>
               </div>

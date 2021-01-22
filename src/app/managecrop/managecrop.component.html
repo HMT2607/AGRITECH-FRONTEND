@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left-area">
+        <h3>Agri<span style="color:#1b6101">Tech</span></h3>
+      </div>
+      <div class="right-area">
+        <a href="#" class="logout_btn">Logout</a>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
+      </div>
+      <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+      <a href="http://localhost:4200/manageVeg"><i class="fas fa-table"></i><span>Crop Management</span></a>
+      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+      <a href="http://localhost:4200/history"><i class="fas fa-history"></i><span>History</span></a>
+      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+    </div>
+    <!-- sidebar -->
+
+    <div class="row content">
+
+      <br>
+      <div class="col-sm-9" style="margin-top: 40px;">
+        <br>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="well cropCard">
+                      <h4>Select Crop</h4>
+                      <div>
+                        <select style="width: 100%;" [(ngModel)]="cropSelected" (ngModelChange)='onCropSelected($event)'>
+                            <option *ngFor="let plant of availableCrop" [value]="plant.id">{{plant.plant_name}}</option>
+                        </select>
+                        <br>
+                        <!-- <p style="font-weight: normal;">{{modifiedtext}}</p> -->
+                      </div>
+                  </div>
+              </div>
+        </div>
+        <div>
+          <div class="well cropCard">
+            <h4>{{cropSelectedName}}</h4>
+            <p style="font-weight: normal;">{{cropSelectedDescription}}</p>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>N - Nitrogen</h4>
+                <p>Max: {{cropSelectedNHigh}}</p>
+                <p>Min: {{cropSelectedNLow}}</p>  
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>P - Phosphorus</h4>
+                <p>Max: {{cropSelectedPHigh}}</p>
+                <p>Min: {{cropSelectedPLow}}</p> 
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>K - Potassium</h4>
+                <p>Max: {{cropSelectedKHigh}}</p>
+                <p>Min: {{cropSelectedKLow}}</p> 
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>PH</h4>
+                <p>Max: {{cropSelectedPhHigh}}</p>
+                <p>Min: {{cropSelectedPhLow}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>Temperature</h4>
+                <p>Max: {{cropSelectedTempHigh}}</p>
+                <p>Min: {{cropSelectedTempLow}}</p>  
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>Humidity</h4>
+                <p>Max: {{cropSelectedHumHigh}}</p>
+                <p>Min: {{cropSelectedHumLow}}</p> 
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>Electrical Conductivity</h4>
+                <p>Value: {{cropSelectedEc}}</p> 
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="well cropCard">
+                <h4>Maturation time</h4>
+                <p>Day: {{cropSelectedMatureDays}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -9,11 +9,16 @@ body{
     margin: 0;
     padding: 0;
     font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
   }
   
   header{
     position:fixed;
-    background: #22242A;
+    /* background: #22242A; */
+    background: rgba(34, 36, 42, 0.4);
     padding: 20px;
     width: calc(100% - 0%);
     top: 0;
@@ -33,7 +38,7 @@ body{
   
   .logout_btn{
     padding: 5px;
-    background: #19B3D3;
+    background: #1b6101;
     text-decoration: none;
     float: right;
     margin-top: -30px;
@@ -48,14 +53,15 @@ body{
   
   
   .logout_btn:hover{
-    background: #0D9DBB;
+    background: #32ad03;
   }
   
   
   .sidebar{
     z-index: 1;
     top: 0;
-    background: #2F323A;
+    /* background: #2F323A; */
+    background: rgba(34, 36, 42, 0.4);
     margin-top: 60px;
     padding-top: 30px;
     position: fixed;
@@ -77,7 +83,7 @@ body{
   }
   
   .sidebar a{
-    color: #fff;
+    color:#fff;
     display: block;
     width: 100%;
     line-height: 60px;
@@ -89,7 +95,7 @@ body{
   }
   
   .sidebar a:hover{
-    background: #19B3D3;
+    background: #32ad03;
   }
   
   .sidebar i{
@@ -98,7 +104,7 @@ body{
   
   label #sidebar_btn{
     z-index: 1;
-    color: #fff;
+    color: #1b6101;
     position: fixed;
     cursor: pointer;
     left: 25px;
@@ -109,7 +115,7 @@ body{
   }
   
   label #sidebar_btn:hover{
-    color: #19B3D3;
+    color: #32ad03;
   }
   
   
@@ -131,13 +137,15 @@ body{
     width: (100% - 250px);
     /* margin-top: 60px; */
     padding: 20px;
-    margin-left: 250px;
-    background: url(https://miro.medium.com/max/12502/1*09PYj2KQ8fDLHlV0BPE7_A.jpeg) no-repeat;
+    margin-left: 460px;
+    /* background: url(https://harelmallac-my.sharepoint.com/personal/minoushkaj_harelmallac_com/Documents/Microsoft%20Teams%20Chat%20Files/060420-farm-agriculture-fieldsadobestock_303214121.jpeg) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
+    /* background-attachment: fixed; */
     height: 100vh;
     transition: 0.5s;
   }
+  
   
   
   #check:checked ~ .content{
@@ -146,6 +154,16 @@ body{
   
   #check:checked ~ .sidebar .profile_info{
     display: none;
+  }
+
+  #check:checked body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1600px;
   }
   
   #check{
@@ -159,18 +177,99 @@ body{
     align-items: 30px;
   }
   
-  .form-login {
-    background-color: rgba(0,0,0,0.55);
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-    border-color:#d2d2d2;
-    border-width: 5px;
-    color:white;
-    box-shadow:0 1px 0 #cfcfcf;
-    margin-top: 50%;
+  .text-p{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .text-p:hover{
+    color:#185202;
+  }
+  
+  .card{
+    margin-top: 25%;
+    text-align: center;
+    background: rgba(34, 36, 42, 0.4);
+  }
+  
+  .card .card-header{
+    color: #fff;
   
   }
+  
+  
+  
+  #humidity{
+    color:#78e6ff;
+  }
+  
+  
+  #sunlight{
+    color: #fffc30;
+  }
+  
+  
+  #temperature{
+    color:#fa7c41;
+  }
+  
+  .dashboardpng{
+    width: 80px;
+  }
+  
+  .cropCard{
+          background: rgba(255, 255, 255, 0.85);
+  }
+
+  p{
+      color: rgb(143, 126, 14);
+      font-weight: bold;
+  }
+
+  h4{
+      color: #1b6101;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #1b6101;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 1525px;
+    }
+
+  
+.sidebar{
+  left: -185px;
+  height: 1000px;
+}
+
+.sidebar a span{
+  display: none;
+}
+
+.sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  margin-left: 60px;
+}
+
+.sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}    
+  }
+  
   

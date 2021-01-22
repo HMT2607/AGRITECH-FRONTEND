@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- SCRIPTS -->
+    <script src="../js/accuweather.js"></script>
+    <!-- SCRIPTS -->
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left-area">
+        <h3>Agri<span style="color:#1b6101">Tech</span></h3>
+      </div>
+      <div class="right-area">
+        <a href="#" class="logout_btn">Logout</a>
+      </div>
+    </header>
+
+    <div class="content">
+      <!-- sidebar -->
+      <div class="row">
+        <div class="col-3">
+          <div class="sidebar">
+            <div class="profile_info">
+              <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
+            </div>
+            <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+            <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
+            <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
+            <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+            <a href="#"><i class="fas fa-history"></i><span>History</span></a>
+            <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+          </div>
+        </div>
+        <!-- sidebar -->
+
+        
+          <!-- main body -->
+        <div class="col-8"> 
+          <div class="col" id="Htable" style="overflow-y: scroll; height:450px; scrollbar-color: light;">
+            <div><h4 style="color: #1b6101;">HUMIDITY & TEMPERATURE</h4></div>
+            <table class="table table-condensed table-striped">
+              <thead style="background-color: #1b6101;">
+                <!-- <tr><th colspan="5" style="background-color: white; color: #1b6101;" class="text-center display-4">HUMIDITY & TEMPERATURE</th></tr> -->
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Humidity</th>
+                  <th scope="col">Temperature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr scope="row" *ngFor = "let data of historyDataHumidity">
+                  <td>{{data.date}}</td>
+                  <td>{{data.humidity}}</td>
+                  <td>{{data.temperature}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div><h4 style="color: #1b6101;" class="animated bounce infinite">PUMP</h4></div>
+            <table class="table table-hover table-striped table-condensed">
+              <thead style="background-color: #1b6101;">
+                <!-- <tr><th colspan="5" style="background-color: white; color: #1b6101;" class="text-center display-4">PUMP</th></tr> -->
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Device Id</th>
+                  <th scope="col">Activation</th>
+                  <th scope="col">User Id</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr scope="row" *ngFor = "let data of historyDataPump">
+                  <td>{{data.date}}</td>
+                  <td>{{data.device_eid}}</td>
+                  <td>{{data.activation}}</td>
+                  <td>{{data.user_id}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div><h4 style="color: #1b6101;">SENSOR NODE</h4></div>
+            <table class="table table-hover table-striped table-condensed">
+              <thead style="background-color: #1b6101;">
+                <!-- <tr><th colspan="10" style="background-color: white; color: #1b6101;" class="text-center display-4">SENSOR NODE</th></tr> -->
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">N</th>
+                  <th scope="col">P</th>
+                  <th scope="col">K</th>
+                  <th scope="col">Light</th>
+                  <th scope="col">Soil Moisture</th>
+                  <th scope="col">Soil Temperature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr scope="row" *ngFor = "let data of historyDataSensor">
+                  <td>{{data.date}}</td>
+                  <td>{{data.N}}</td>
+                  <td>{{data.P}}</td>
+                  <td>{{data.K}}</td>
+                  <td>{{data.light}}</td>
+                  <td>{{data.soilMoisture}}</td>
+                  <td>{{data.soilTemperature}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> 
+        </div>  
+      </div>
+    </div>
+  </body>
+</html>

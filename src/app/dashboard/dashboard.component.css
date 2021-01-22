@@ -207,5 +207,82 @@ label #sidebar_btn:hover{
 }
 
 
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 2200px;
+  }
+
+.sidebar{
+  left: -185px;
+  height: 1000px;
+}
+
+.sidebar a span{
+  display: none;
+}
+
+.sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  margin-left: 60px;
+}
+
+.sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 2825px;
+  }
+
+.sidebar{
+  left: -185px;
+
+}
+
+.sidebar a span{
+  display: none;
+}
+
+.sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  margin-left: 60px;
+}
+
+.sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}
 
 
+}
