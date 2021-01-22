@@ -166,34 +166,16 @@ label #sidebar_btn:hover{
   align-items: 30px;
 }
 
-
-
-
-
-.card{
-  margin-top: 25%;
-  text-align: center;
-  background: rgba(34, 36, 42, 0.8);
-}
-
-.card .card-header{
+.text-p{
+  text-decoration: none;
   color: #fff;
-
 }
 
-.dashboardpng{
-  width: 80px;
+.text-p:hover{
+  color:#185202;
 }
 
 
 
-#Htable{
-  margin-top: 60px;
-  margin-right: 12px;
-  background: rgba(34, 36, 42, 0.9);
-  border-radius: 40px;
-}
 
-.table{
-  color: antiquewhite;
-}
+

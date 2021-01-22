@@ -187,17 +187,39 @@ fetch("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+loc_key[0]+"
     (document.getElementById('actualTemperature') as HTMLHeadingElement).textContent = nums[0].toFixed(0)+"°";
 
     if (shortPhrase[0].indexOf("t-storm") != -1){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
     }
     else if((shortPhrase[0].indexOf("shower") != -1) || (shortPhrase[0].indexOf("rain") != -1)){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/rainny.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/rainny.png';
     }
     else if((shortPhrase[0].indexOf("sunny") != -1) || (shortPhrase[0].indexOf("sun") != -1)){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/sun.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/sun.png';
     }
     else if(shortPhrase[0].indexOf("clouds and sun") != -1){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
     }
+
+    // if (shortPhrase[0]==="A morning t-storm in the area"){
+    //   (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
+    // }
+
+
+    // (document.getElementById('zxs') as HTMLImageElement).src = '../../assets/npk.png';
+
+    // let testzx = "../../assets/alien.png";
+
+    //Object.entries(x).forEach(([key, value]) => console.log(`${value}`['date']));
+    //var phaseValueArr = obj.phaseExecutions.PRE.map(x => x.phaseValue);
+
+
+    //var phaseValueArr = x.phaseExecutions.Temperature.map(z => z.phaseValue);
+
+  //   myJson["DailyForecasts"].forEach(obj => {
+  //     Object.entries(obj).forEach(([key, value]) => {
+  //         console.log(`${key} ${value}`);
+  //     });
+  //     console.log('-------------------');
+  // });
   });
   }
 

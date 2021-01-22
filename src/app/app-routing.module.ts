@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddDevicesComponent } from './add-devices/add-devices.component';
+import { AiSystemComponent } from './ai-system/ai-system.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForecastComponent } from './forecast/forecast.component';
 import { HumidityDetailsComponent } from './humidity-details/humidity-details.component';
@@ -22,18 +23,21 @@ const routes: Routes = [{
     path : 'forecast',
     component : ForecastComponent
   },{
+    path : 'ai-system',
+    component : AiSystemComponent
+  },{
     path : 'history',
-    component : HistoryComponent
-  },{
-    path : 'manageCrop',
-    component : ManagecropComponent
-  },{
-    path : 'controlDevice',
-    component : DevicecontrollerComponent
-  },{
-    path : 'login',
-    component : LoginComponent
-  }
+  component : HistoryComponent
+},{
+  path : 'manageCrop',
+  component : ManagecropComponent
+},{
+  path : 'controlDevice',
+  component : DevicecontrollerComponent
+},{
+  path : 'login',
+  component : LoginComponent
+}
 ];
 
 @NgModule({
@@ -42,4 +46,4 @@ const routes: Routes = [{
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [DashboardComponent, AddDevicesComponent, HumidityDetailsComponent, ForecastComponent, HistoryComponent, DevicecontrollerComponent, LoginComponent]
+export const routingComponents = [DashboardComponent, AddDevicesComponent, LoginComponent, HumidityDetailsComponent, ForecastComponent, AiSystemComponent]

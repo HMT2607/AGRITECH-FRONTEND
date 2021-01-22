@@ -15,6 +15,8 @@ import { ManagecropComponent } from './managecrop/managecrop.component';
 import { DevicecontrollerComponent } from './devicecontroller/devicecontroller.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import { AiSystemComponent } from './ai-system/ai-system.component';
+
 
 @NgModule({
   declarations: [
@@ -27,16 +29,20 @@ import { LoginComponent } from './login/login.component';
     ContentComponent,
     ManagecropComponent,
     DevicecontrollerComponent,
-    LoginComponent
+    LoginComponent,
+    AiSystemComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }
