@@ -9,6 +9,7 @@ import { HumidityDetailsComponent } from './humidity-details/humidity-details.co
 import { ForecastComponent } from './forecast/forecast.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { AiSystemComponent } from './ai-system/ai-system.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
     ManageVegComponent,
     HumidityDetailsComponent,
     ForecastComponent,
+    AiSystemComponent,
 
   ],
   imports: [
