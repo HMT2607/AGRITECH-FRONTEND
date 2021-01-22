@@ -8,6 +8,8 @@ import { ManageVegComponent } from './manage-veg/manage-veg.component';
 import { HumidityDetailsComponent } from './humidity-details/humidity-details.component';
 import { ForecastComponent } from './forecast/forecast.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +18,17 @@ import { ForecastComponent } from './forecast/forecast.component';
     LoginComponent,
     ManageVegComponent,
     HumidityDetailsComponent,
-    ForecastComponent
+    ForecastComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

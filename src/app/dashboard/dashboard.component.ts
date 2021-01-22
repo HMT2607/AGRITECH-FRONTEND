@@ -89,20 +89,20 @@ export class DashboardComponent implements OnInit {
     (document.getElementById('actualTemperature') as HTMLHeadingElement).textContent = nums[0].toFixed(0)+"°";
 
     if (shortPhrase[0].indexOf("t-storm") != -1){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
     }
     else if((shortPhrase[0].indexOf("shower") != -1) || (shortPhrase[0].indexOf("rain") != -1)){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/rainny.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/rainny.png';
     }
     else if((shortPhrase[0].indexOf("sunny") != -1) || (shortPhrase[0].indexOf("sun") != -1)){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/sun.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/sun.png';
     }
     else if(shortPhrase[0].indexOf("clouds and sun") != -1){
-      (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
+      (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/partlysunny.png';
     }
 
     // if (shortPhrase[0]==="A morning t-storm in the area"){
-    //   (document.getElementById('waetherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
+    //   (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';
     // }
 
 

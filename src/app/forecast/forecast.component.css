@@ -17,7 +17,7 @@ body{
 header{
   position:fixed;
   /* background: #22242A; */
-  background: rgba(34, 36, 42, 0.4);
+  background: rgba(34, 36, 42, 0.55);
   padding: 20px;
   width: calc(100% - 0%);
   top: 0;
@@ -60,7 +60,7 @@ header{
   z-index: 1;
   top: 0;
   /* background: #2F323A; */
-  background: rgba(34, 36, 42, 0.4);
+  background: rgba(34, 36, 42, 0.55);
   margin-top: 60px;
   padding-top: 30px;
   position: fixed;
@@ -173,7 +173,7 @@ label #sidebar_btn:hover{
 .card{
   margin-top: 25%;
   text-align: center;
-  background: rgba(34, 36, 42, 0.4);
+  background: rgba(34, 36, 42, 0.8);
 }
 
 .card .card-header{
@@ -190,6 +190,10 @@ label #sidebar_btn:hover{
 #Htable{
   margin-top: 60px;
   margin-right: 12px;
-  background: rgba(34, 36, 42, 0.4);
+  background: rgba(34, 36, 42, 0.9);
   border-radius: 40px;
+}
+
+.table{
+  color: antiquewhite;
 }
