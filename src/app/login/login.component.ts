@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    console.log(789588);
   }
 
   login(uname:string, pass:string){

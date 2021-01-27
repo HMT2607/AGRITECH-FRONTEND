@@ -6,12 +6,13 @@
 } */
 
 body{
-  margin: 0;
-  padding: 0;
-  font-family:"Roboto", sans-serif;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* font-family:"Roboto", sans-serif; */
+    /* background-position: center; */
   background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
-  background-position: center;
   background-size: cover;
+  height: 75vw;
 }
 
 header{
@@ -57,9 +58,8 @@ header{
 
 
 .sidebar{
-  z-index: 1;
+  z-index: auto;
   top: 0;
-  /* background: #2F323A; */
   background: rgba(34, 36, 42, 0.55);
   margin-top: 60px;
   padding-top: 30px;
@@ -70,6 +70,7 @@ header{
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
+  /* background: #2F323A; */
 }
 
 
@@ -134,15 +135,16 @@ label #sidebar_btn:hover{
 
 .content{
   width: (100% - 250px);
-  /* margin-top: 60px; */
   padding: 20px;
   margin-left: 250px;
+  height: 100vh;
+  transition: 0.5s;
+  /* margin-top: 60px; */
   /* background: url(https://harelmallac-my.sharepoint.com/personal/minoushkaj_harelmallac_com/Documents/Microsoft%20Teams%20Chat%20Files/060420-farm-agriculture-fieldsadobestock_303214121.jpeg) no-repeat;
   background-position: center;
   background-size: cover; */
   /* background-attachment: fixed; */
-  height: 100vh;
-  transition: 0.5s;
+
 }
 
 
@@ -211,7 +213,7 @@ label #sidebar_btn:hover{
   height: 60px;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 640px) {
   body {
     margin: 0;
     padding: 0;
@@ -219,13 +221,12 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 2200px;
+    height: 50vw;
   }
 
-.sidebar{
-  left: -185px;
-  height: 1000px;
-}
+  .sidebar{
+    height: calc(100% - 15%);
+  }
 
 .sidebar a span{
   display: none;
@@ -248,9 +249,8 @@ label #sidebar_btn:hover{
 #check{
   display: none;
 }
-}
-
-@media only screen and (min-width: 700px) {
+} */
+@media only screen and (max-width: 1024px) {
   body {
     margin: 0;
     padding: 0;
@@ -258,35 +258,191 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 2825px;
+    height: 1200px;
+    /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-size: cover;
+    height: 75vw; */
   }
 
-.sidebar{
-  left: -185px;
+  /* .sidebar{
+    left: -185px;
+    height: calc(100% - 5%);
+  }
 
+  .sidebar a span{
+    display: none;
+  }
+
+  .sidebar a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+
+  .content{
+    margin-left: 60px;
+  } */
+
+  .upperRow{
+    margin-top: 25px;
+  }
+
+  /* .sidebar .profile_info{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  } */
 }
 
-.sidebar a span{
-  display: none;
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1200px;
+    /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-size: cover;
+    height: 75vw; */
+  }
+
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 5%);
+  }
+
+  .sidebar a span{
+    display: none;
+  }
+
+  .sidebar a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+
+  .content{
+    margin-left: 60px;
+  }
+
+  .upperRow{
+    margin-top: 25px;
+  }
+
+  .sidebar .profile_info{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
 }
 
-.sidebar a{
-  font-size: 20px;
-  margin-left: 165px;
-  width: 100%;
+@media only screen and (max-width: 731px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 3200px;
+    /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-size: cover;
+    height: 75vw; */
+  }
+
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 15%);
+  }
+
+  .sidebar a span{
+    display: none;
+  }
+
+  .sidebar a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+
+  .content{
+    margin-left: 60px;
+  }
+
+  .sidebar .profile_info{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
 }
 
-.content{
-  margin-left: 60px;
+@media only screen and (max-width: 640px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 3000px;
+  }
+
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 15%);
+  }
 }
 
-.sidebar .profile_info{
-  display: none;
+@media only screen and (max-width: 411px) {
+  body {
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600vw;
+  }
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 7%);
+  }
 }
 
-#check{
-  display: none;
+@media only screen and (max-width: 360px) {
+  body {
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 650vw;
+  }
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 7%);
+  }
 }
+/* @media only screen and (max-width: 360px) {
+  .sidebar{
+    height: calc(100% - 7%);
+  }
+} */
 
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
 
-}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */

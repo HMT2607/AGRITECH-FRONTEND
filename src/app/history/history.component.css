@@ -198,7 +198,7 @@ table thead tr th{
   color: white;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) {
   body {
     margin: 0;
     padding: 0;
@@ -206,7 +206,24 @@ table thead tr th{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1525px;
+    height: 80vw;
+  }
+
+.content{
+margin-left: 60px;
+}
+ 
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 145vw;
   }
 
 
@@ -226,7 +243,7 @@ width: 100%;
 }
 
 .content{
-margin-left: 60px;
+margin-left: -70px;
 }
 
 .sidebar .profile_info{
@@ -236,4 +253,85 @@ display: none;
 #check{
 display: none;
 }    
+}
+
+@media only screen and (max-width: 731px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vw;
+  }
+
+.content{
+margin-left: -70px;
+}
+
+.sidebar{
+  left: -185px;
+  height: calc(100% - 15%);
+}
+ 
+}
+
+@media only screen and (max-width: 411px) {
+  body {
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200vw;
+  }
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 7%);
+  }
+  .content{
+    margin-left: -60px;
+    }
+    table{
+      width: 70vw;
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+  body {
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vw;
+  }
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 15%);
+  }
+  .content{
+    margin-left: -60px;
+    }
+    table{
+      width: 70vw;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+  body {
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200vw;
+  }
+  .sidebar{
+    left: -185px;
+    height: calc(100% - 0%);
+  }
+  .content{
+    margin-left: -20px;
+    }
+    table{
+      width: 90vw;
+    }
 }

@@ -232,7 +232,92 @@ body{
       -webkit-text-stroke-color: #1b6101;
   }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1024px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 79vw;
+    }
+   
+  }
+
+  @media only screen and (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: auto;
+    }
+  
+  
+  .sidebar{
+  left: -185px;
+  height: 1000px;
+  }
+  
+  .sidebar a span{
+  display: none;
+  }
+  
+  .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+  }
+  
+  .content{
+  margin-left: 180px;
+  }
+  
+  .sidebar .profile_info{
+  display: none;
+  }
+  
+  #check{
+  display: none;
+  }    
+  }
+
+  @media only screen and (max-width: 731px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 79vw;
+    }
+    .sidebar{
+      left: -185px;
+      height: calc(100% - 15%);
+    }
+  }
+
+  @media only screen and (max-width: 411px) {
+    body {
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 200vw;
+    }
+    .sidebar{
+      left: -185px;
+      height: calc(100% - 7%);
+    }
+
+    .content{
+      margin-left: 50px;
+      }
+  }
+  /* @media only screen and (max-width: 700px) {
     body {
       margin: 0;
       padding: 0;
@@ -270,5 +355,5 @@ body{
   #check{
   display: none;
   }    
-  }
+  } */
   

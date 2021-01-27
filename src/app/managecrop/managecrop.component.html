@@ -29,11 +29,11 @@
         <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
       </div>
       <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-      <a href="http://localhost:4200/manageVeg"><i class="fas fa-table"></i><span>Crop Management</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-      <a href="http://localhost:4200/history"><i class="fas fa-history"></i><span>History</span></a>
+      <a href="http://localhost:4200/manageCrop"><i class="fas fa-th"></i><span>Crop Management</span></a>
+      <a href="http://localhost:4200/controlDevice"><i class="fas fa-cogs"></i><span>Device Management</span></a>
+      <a href="http://localhost:4200/history"><i class="fas fa-table"></i><span>History</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
     </div>
     <!-- sidebar -->
@@ -45,7 +45,7 @@
         <br>
           <div class="row">
               <div class="col-sm-12">
-                  <div class="well cropCard">
+                  <div class="well cropCard cardSizeFirst">
                       <h4>Select Crop</h4>
                       <div>
                         <select style="width: 100%;" [(ngModel)]="cropSelected" (ngModelChange)='onCropSelected($event)'>
@@ -58,34 +58,34 @@
               </div>
         </div>
         <div>
-          <div class="well cropCard">
+          <div class="well cropCard cardSizeSecond">
             <h4>{{cropSelectedName}}</h4>
             <p style="font-weight: normal;">{{cropSelectedDescription}}</p>
           </div>
           <div class="row">
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize1">
                 <h4>N - Nitrogen</h4>
                 <p>Max: {{cropSelectedNHigh}}</p>
                 <p>Min: {{cropSelectedNLow}}</p>  
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize2">
                 <h4>P - Phosphorus</h4>
                 <p>Max: {{cropSelectedPHigh}}</p>
                 <p>Min: {{cropSelectedPLow}}</p> 
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize3">
                 <h4>K - Potassium</h4>
                 <p>Max: {{cropSelectedKHigh}}</p>
                 <p>Min: {{cropSelectedKLow}}</p> 
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize4">
                 <h4>PH</h4>
                 <p>Max: {{cropSelectedPhHigh}}</p>
                 <p>Min: {{cropSelectedPhLow}}</p>
@@ -94,27 +94,27 @@
           </div>
           <div class="row">
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize5">
                 <h4>Temperature</h4>
                 <p>Max: {{cropSelectedTempHigh}}</p>
                 <p>Min: {{cropSelectedTempLow}}</p>  
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize6">
                 <h4>Humidity</h4>
                 <p>Max: {{cropSelectedHumHigh}}</p>
                 <p>Min: {{cropSelectedHumLow}}</p> 
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize7">
                 <h4>Electrical Conductivity</h4>
                 <p>Value: {{cropSelectedEc}}</p> 
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="well cropCard">
+              <div class="well cropCard cardSize8">
                 <h4>Maturation time</h4>
                 <p>Day: {{cropSelectedMatureDays}}</p>
               </div>
