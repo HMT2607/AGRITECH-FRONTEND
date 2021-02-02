@@ -1,3 +1,16 @@
+<!-- <div>
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+</div> -->
+
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +31,7 @@
         <h3>Agri<span style="color:#1b6101">Tech</span></h3>
       </div>
       <div class="right-area">
-        <a href="#" class="logout_btn">Logout</a>
+        <a href="#" (click)="logout()" class="logout_btn">Logout</a>
       </div>
     </header>
 
@@ -39,6 +52,187 @@
     <div class="content">
       <!-- main body -->
       <!-- =============================================================================== -->
+<!--
+        <div class='row' id="graph">
+
+            <div>
+              <div style="display: block">
+                <h2>Light Graph</h2>
+                <canvas height="400"
+                        width="800"
+                        baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                </canvas>
+              </div>
+
+
+
+          </div>
+        </div> -->
+
+
+        <div class='row' id="tip">
+
+          <div>
+            <div style="display: block">
+              <h2>Tips</h2>
+              <p>The red line represents the actual data that are being reveiced by the sensors.</p>
+              <p>The values are in the optimal range when they are between the blue and yellow lines. These lines represent the lower and upper range of the values.</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+        <div class='row' id="graph2">
+
+          <div>
+            <div style="display: block">
+              <h2>Temperature Graph</h2>
+              <canvas height="400"
+                      width="800"
+                      baseChart
+                      [datasets]="tempData"
+                      [labels]="tempLabels"
+                      [options]="tempOptions"
+                      [legend]="tempLegend"
+                      [chartType]="tempType">
+              </canvas>
+            </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class='row' id="graph3">
+
+        <div>
+          <div style="display: block">
+            <h2>Humidity Graph</h2>
+            <canvas height="400"
+                    width="800"
+                    baseChart
+                    [datasets]="humdData"
+                    [labels]="humdLabels"
+                    [options]="humdOptions"
+                    [legend]="humdLegend"
+                    [chartType]="humdType">
+            </canvas>
+          </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class='row' id="graph4">
+
+      <div>
+        <div style="display: block">
+          <h2>Soil Humidity Graph</h2>
+          <canvas height="400"
+                  width="800"
+                  baseChart
+                  [datasets]="soilhData"
+                  [labels]="soilhLabels"
+                  [options]="soilhOptions"
+                  [legend]="soilhLegend"
+                  [chartType]="soilhType">
+          </canvas>
+        </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class='row' id="graph5">
+
+    <div>
+      <div style="display: block">
+        <h2>Nitrogen Graph</h2>
+        <canvas height="400"
+                width="800"
+                baseChart
+                [datasets]="nData"
+                [labels]="nLabels"
+                [options]="nOptions"
+                [legend]="nLegend"
+                [chartType]="nType">
+        </canvas>
+      </div>
+
+
+
+  </div>
+</div>
+
+
+
+<div class='row' id="graph6">
+
+  <div>
+    <div style="display: block">
+      <h2>Phosphorus Graph</h2>
+      <canvas height="400"
+              width="800"
+              baseChart
+              [datasets]="pData"
+              [labels]="pLabels"
+              [options]="pOptions"
+              [legend]="pLegend"
+              [chartType]="pType">
+      </canvas>
+    </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+<div class='row' id="graph7">
+
+  <div>
+    <div style="display: block">
+      <h2>Potasium Graph</h2>
+      <canvas height="400"
+              width="800"
+              baseChart
+              [datasets]="kData"
+              [labels]="kLabels"
+              [options]="kOptions"
+              [legend]="kLegend"
+              [chartType]="kType">
+      </canvas>
+    </div>
+
+
+
+</div>
+</div>
 
 
       <!-- =============================================================================== -->
