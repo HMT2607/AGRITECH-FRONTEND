@@ -8,21 +8,17 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
   <body>
-    <input type="checkbox" id="check">
     <header>
       <label for="check">
-        <i class="fas fa-bars" id="sidebar_btn"></i>
+        <i class="" id="sidebar_btn"></i>
       </label>
       <div class="left-area">
-        <h3>Agri<span style="color:#19B3D3">Tech</span></h3>
-      </div>
-      <div class="right-area">
-        <a href="#" class="logout_btn">Logout</a>
+        <h3>Agri<span style="color:#6AEA81">Tech</span></h3>
       </div>
     </header>
 
     <!-- sidebar -->
-    <div class="sidebar">
+    <!-- <div class="sidebar">
       <div class="profile_info">
         <img src="https://img.thrfun.com/img/007/595/tree_winter_x5.jpg" alt="" class="profile_image">
       </div>
@@ -32,39 +28,37 @@
       <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
       <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-    </div>
+    </div> -->
     <!-- sidebar -->
 
-    <div class="content">
-      <div class="row">
-        <div class="col-md-7"></div>
+    <div class="container">
+      <div class="row outerContainer">
         <div class="col-md-4 text-center">
             <div class="form-login">
-            <h2 class='text-white'>Login</h2>
+            <h2 class='text-white logintext'>Login</h2>
 
-                <form>
+                <form class="formLoginComponent">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text"  #txtUsername class="form-control"  />
+                        <label for="username" class="inputUsername">Username</label>
+                        <input type="text"  #txtUsername class="form-control loginField" placeholder="Username" />
                         <div class="invalid-feedback">
                             <div *>Username is required</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" #txtPassword  class="form-control"  />
+                        <label for="password" class="inputPassword">Password</label>
+                        <input type="password" #txtPassword class="form-control loginField" placeholder="Password" />
                         <div class="invalid-feedback">
                             <div >Password is required</div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="button" value="Login" id="btnLogin" (click)="login(txtUsername.value, txtPassword.value)"  class="btn btn-primary"/>
+                        <input type="button" value="Login" id="btnLogin" (click)="login(txtUsername.value, txtPassword.value)"  class="btn btn-success"/>
 
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-md-1"></div>
     </div>
     </div>
   </body>

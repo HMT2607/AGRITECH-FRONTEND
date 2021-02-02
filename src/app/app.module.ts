@@ -9,8 +9,6 @@ import { ForecastComponent } from './forecast/forecast.component';
 import { HistoryComponent } from './history/history.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
 import { ManagecropComponent } from './managecrop/managecrop.component';
 import { DevicecontrollerComponent } from './devicecontroller/devicecontroller.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,8 +25,6 @@ import { RegisterPlantComponent } from './register-plant/register-plant.componen
     HumidityDetailsComponent,
     ForecastComponent,
     HistoryComponent,
-    HeaderComponent,
-    ContentComponent,
     ManagecropComponent,
     DevicecontrollerComponent,
     LoginComponent,

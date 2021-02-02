@@ -232,7 +232,164 @@ body{
       -webkit-text-stroke-color: #1b6101;
   }
   
-  @media only screen and (max-width: 600px) {
+
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 800px;
+      /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-size: cover;
+      height: 75vw; */
+    }
+    .content{
+      margin-left: 280px;
+    }
+
+    .cardSizeFirst{
+      width: 61vw;
+    }
+
+    .cardSizeSecond{
+      width: 61vw;
+    }
+
+    .cardSize1{
+      width: 15vw;
+      /* margin-left: 3vw; */
+    }
+
+    .cardSize2{
+      width: 16vw;
+      margin-left: 2vw;
+    }
+
+    .cardSize3{
+      width: 15vw;
+      margin-left: 5vw;
+    }
+
+    .cardSize4{
+      width: 15vw;
+      margin-left: 7vw;
+    }
+
+    .cardSize5{
+      width: 15vw;
+      /* margin-left: 3vw; */
+    }
+
+    .cardSize6{
+      width: 16vw;
+      margin-left: 2vw;
+    }
+
+    .cardSize7{
+      width: 15vw;
+      margin-left: 5vw;
+    }
+
+    .cardSize8{
+      width: 15vw;
+      margin-left: 7vw;
+    }
+  
+    /* .sidebar{
+      left: -185px;
+      height: calc(100% - 5%);
+    }
+  
+    .sidebar a span{
+      display: none;
+    }
+  
+    .sidebar a{
+      font-size: 20px;
+      margin-left: 165px;
+      width: 100%;
+    }
+  
+    .content{
+      margin-left: 60px;
+    } */
+  
+    /* .upperRow{
+      margin-top: 25px;
+    }
+   */
+    /* .sidebar .profile_info{
+      display: none;
+    }
+  
+    #check{
+      display: none;
+    } */
+  }
+
+  @media only screen and (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 1200px;
+      /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-size: cover; */
+      height: 140vw;
+    }
+  
+    .sidebar{
+      left: -185px;
+      height: calc(100% - 5%);
+    }
+  
+    .sidebar a span{
+      display: none;
+    }
+  
+    .sidebar a{
+      font-size: 20px;
+      margin-left: 165px;
+      width: 100%;
+    }
+  
+    .content{
+      margin-left: 60px;
+    }
+  
+    .upperRow{
+      margin-top: 25px;
+    }
+  
+    .sidebar .profile_info{
+      display: none;
+    }
+  
+    #check{
+      display: none;
+    }
+
+    .content{
+      margin-left: 120px;
+    }
+
+    .cardSizeFirst{
+      width: 68vw;
+    }
+
+    .cardSizeSecond{
+      width: 68vw;
+    }
+
+  }
+  /* @media only screen and (max-width: 600px) {
     body {
       margin: 0;
       padding: 0;
@@ -270,6 +427,6 @@ body{
 #check{
   display: none;
 }    
-  }
+  } */
   
   
