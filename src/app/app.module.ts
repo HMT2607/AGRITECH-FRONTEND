@@ -14,6 +14,7 @@ import { DevicecontrollerComponent } from './devicecontroller/devicecontroller.c
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { AiSystemComponent } from './ai-system/ai-system.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AiSystemComponent } from './ai-system/ai-system.component';
     DevicecontrollerComponent,
     LoginComponent,
     AiSystemComponent,
+    AboutpageComponent,
 
   ],
   imports: [

@@ -1,0 +1,435 @@
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+  }
+  
+  header{
+    position:fixed;
+    /* background: #22242A; */
+    background: rgba(34, 36, 42, 0.4);
+    padding: 20px;
+    width: calc(100% - 0%);
+    top: 0;
+    height: 60px;
+    z-index: 1;
+  }
+  
+  .left-area h3{
+    color: #fff;
+    margin-top: -30px;
+    margin-left: 60px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  
+  
+  .logout_btn{
+    padding: 5px;
+    background: #1b6101;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 2%;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+  }
+  
+  
+  .logout_btn:hover{
+    background: #32ad03;
+  }
+  
+  
+  .sidebar{
+    z-index: 1;
+    top: 0;
+    /* background: #2F323A; */
+    background: rgba(34, 36, 42, 0.4);
+    margin-top: 60px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 7%);
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+  }
+  
+  
+  .sidebar .profile_info .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    margin-left:25%;
+  }
+  
+  .sidebar a{
+    color:#fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+  
+  .sidebar a:hover{
+    background: #32ad03;
+  }
+  
+  .sidebar i{
+    padding-right: 10px;
+  }
+  
+  label #sidebar_btn{
+    z-index: 1;
+    color: #1b6101;
+    position: fixed;
+    cursor: pointer;
+    left: 25px;
+    font-size: 20px;
+    margin-top: -10px;
+    transition: 0.5s;
+    transition-property: color;
+  }
+  
+  label #sidebar_btn:hover{
+    color: #32ad03;
+  }
+  
+  
+  #check:checked ~ .sidebar{
+    left: -185px;
+  }
+  
+  #check:checked ~ .sidebar a span{
+    display: none;
+  }
+  
+  #check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+  
+  .content{
+    width: (100% - 250px);
+    /* margin-top: 60px; */
+    padding: 20px;
+    margin-left: 460px;
+    /* background: url(https://harelmallac-my.sharepoint.com/personal/minoushkaj_harelmallac_com/Documents/Microsoft%20Teams%20Chat%20Files/060420-farm-agriculture-fieldsadobestock_303214121.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover; */
+    /* background-attachment: fixed; */
+    height: 100vh;
+    transition: 0.5s;
+  }
+  
+  
+  
+  #check:checked ~ .content{
+    margin-left: 60px;
+  }
+  
+  #check:checked ~ .sidebar .profile_info{
+    display: none;
+  }
+
+  #check:checked body {
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto", sans-serif;
+    background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1600px;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  .profile_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: 30px;
+    align-items: 30px;
+  }
+  
+  .text-p{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .text-p:hover{
+    color:#185202;
+  }
+  
+  .card{
+    margin-top: 25%;
+    text-align: center;
+    background: rgba(34, 36, 42, 0.4);
+  }
+  
+  .card .card-header{
+    color: #fff;
+  
+  }
+  
+  
+  
+  #humidity{
+    color:#78e6ff;
+  }
+  
+  
+  #sunlight{
+    color: #fffc30;
+  }
+  
+  
+  #temperature{
+    color:#fa7c41;
+  }
+  
+  .dashboardpng{
+    width: 80px;
+  }
+  
+  .cropCard{
+          background: rgba(255, 255, 255, 0.55);
+          height: 20vw;
+  }
+
+  /* p{
+      color: rgb(143, 126, 14);
+      font-weight: bold;
+  } */
+
+  h4{
+      color: #1b6101;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #1b6101;
+  }
+  
+  .mbr-white{
+      margin-top: 140px;
+      margin-left: -200px;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 79vw;
+    }
+
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 28vw;
+}
+
+    .aboutText{
+      font-size: larger;
+    }
+   
+  }
+
+  @media only screen and (max-width: 768px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: auto;
+    }
+
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 45vw;
+      margin-left: -9vw;
+    }
+
+    .aboutText{
+      font-size: x-large;
+    }
+  
+  
+  .sidebar{
+  left: -185px;
+  height: 1000px;
+  }
+  
+  .sidebar a span{
+  display: none;
+  }
+  
+  .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+  }
+  
+  .content{
+  margin-left: 150px;
+  }
+  
+  .sidebar .profile_info{
+  display: none;
+  }
+  
+  #check{
+  display: none;
+  }    
+  }
+
+  @media only screen and (max-width: 731px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 79vw;
+    }
+    .sidebar{
+      left: -185px;
+      height: calc(100% - 15%);
+    }
+
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 35vw;
+      margin-left: -6vw;
+}
+  }
+
+  @media only screen and (max-width: 640px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 79vw;
+    }
+    .content{
+      margin-left: 140px;
+      }
+
+      .display-2{
+        font-size: x-large;
+      }
+
+      .cropCard{
+        background: rgba(255, 255, 255, 0.55);
+        height: 35vw;
+  }
+  }
+
+
+  @media only screen and (max-width: 411px) {
+    body {
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 200vw;
+    }
+    .sidebar{
+      left: -185px;
+      height: calc(100% - 7%);
+    }
+
+    .content{
+      margin-left: 50px;
+      }
+
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 60vw;
+      margin-left: 4vw;
+}
+  }
+
+  @media only screen and (max-width: 360px) {
+
+
+    .content{
+      margin-left: 55px;
+      }
+
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 85vw;
+}
+  }
+  /* @media only screen and (max-width: 700px) {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Roboto", sans-serif;
+      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 1525px;
+    }
+  
+  
+  .sidebar{
+  left: -185px;
+  height: 1000px;
+  }
+  
+  .sidebar a span{
+  display: none;
+  }
+  
+  .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+  }
+  
+  .content{
+  margin-left: 60px;
+  }
+  
+  .sidebar .profile_info{
+  display: none;
+  }
+  
+  #check{
+  display: none;
+  }    
+  } */
+  

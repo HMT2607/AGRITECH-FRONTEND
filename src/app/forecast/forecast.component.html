@@ -7,6 +7,10 @@
     <script src="../js/accuweather.js"></script>
     <!-- SCRIPTS -->
 
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
   </head>
   <body>
     <input type="checkbox" id="check">
@@ -28,10 +32,11 @@
         <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
       </div>
       <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
+      <a href="http://localhost:4200/manageCrop"><i class="fas fa-th"></i><span>Crop Management</span></a>
+      <a href="http://localhost:4200/controlDevice"><i class="fas fa-cogs"></i><span>Device Management</span></a>
+      <a href="http://localhost:4200/history"><i class="fas fa-table"></i><span>History</span></a>
       <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
       <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
     </div>
     <!-- sidebar -->
@@ -39,20 +44,22 @@
     <div class="content">
       <!-- main body -->
       <!-- =============================================================================== -->
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
-                    <img id="waetherPic" class="dashboardpng" src="../../assets/sun.png"/>
-                  </div>
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img id="waetherPic" class="dashboardpng" src="../../assets/sun.png"/>
+                </div>
                 <div class="col">
                   <h3 class="display-3" id="actualTemperature">00</h3>
                   <h6>Current Weather</h6>
                 </div>
-                </div>
               </div>
+            </div>
           </div>
 
 
@@ -64,50 +71,45 @@
                 <div class="col">
                   <img id="3hforecast" class="dashboardpng" src="../../assets/sun.png"/>
                 </div>
-              <div class="col">
-                <h3 class="display-3" id="3hTemperature">00</h3>
-                <h6>3h Forecast Weather</h6>
-              </div>
+                <div class="col">
+                  <h3 class="display-3" id="3hTemperature">00</h3>
+                  <h6>3h Forecast Weather</h6>
+                </div>
               </div>
             </div>
-        </div>
-        </div>
-
-        <div class="col-md-3">
-
+          </div>
         </div>
 
+        <div class="col-md-1">
+            
+        </div>
 
-        <div class="col" id="Htable">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Forecast</th>
-                <th scope="col">Avg-Temperature</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor = "let data of d5forecast">
-                    <td>{{data.date}}</td>
-                    <td>{{data.weather}}</td>
-                    <td>{{data.temperature}}</td>
+
+          <div class="col" id="Htable">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Forecast</th>
+                  <th scope="col">Avg-Temperature</th>
                 </tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let data of d5forecast">
+                  <td>{{data.date}}</td>
+                  <td>{{data.weather}}</td>
+                  <td>{{data.temperature}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
+          <div class="col-md-1">
+            
+          </div>
 
-
-
-        <div class="row">
-          <div class="col-md-3">
-
-        </div>
-        </div>
+      </div>
       <!-- =============================================================================== -->
-
     </div>
   </body>
 </html>

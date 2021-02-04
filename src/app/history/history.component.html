@@ -41,9 +41,10 @@
             <a href="http://localhost:4200/manageCrop"><i class="fas fa-th"></i><span>Crop Management</span></a>
             <a href="http://localhost:4200/controlDevice"><i class="fas fa-cogs"></i><span>Device Management</span></a>
             <a href="http://localhost:4200/history"><i class="fas fa-table"></i><span>History</span></a>
-            <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-            <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+            <a href="#"><i class="fas fa-sliders-h"></i><span>Artificial Intelligence</span></a>
+            <a href="http://localhost:4200/#"><i class="fas fa-info-circle"></i><span>Register Plant</span></a>
+            <a href="http://localhost:4200/#"><i class="fas fa-sliders-h"></i><span>Harvest Plant</span></a>
+            <a href="http://localhost:4200/about"><i class="fas fa-info-circle"></i><span>About</span></a>
           </div>
         </div>
         <!-- sidebar -->
@@ -52,8 +53,8 @@
           <!-- main body -->
         <div class="col-8"> 
           <div class="col" id="Htable" style="overflow-y: scroll; height:450px; scrollbar-color: light;">
-            <div><h4 style="color: #1b6101;">HUMIDITY & TEMPERATURE</h4></div>
-            <table class="table table-condensed table-striped">
+            <div><h4 id="labelHT" style="color: #1b6101;">HUMIDITY & TEMPERATURE</h4></div>
+            <table id="tableHT" class="table table-condensed table-striped">
               <thead style="background-color: #1b6101;">
                 <!-- <tr><th colspan="5" style="background-color: white; color: #1b6101;" class="text-center display-4">HUMIDITY & TEMPERATURE</th></tr> -->
                 <tr>
@@ -70,8 +71,8 @@
                 </tr>
               </tbody>
             </table>
-            <div><h4 style="color: #1b6101;" class="animated bounce infinite">PUMP</h4></div>
-            <table class="table table-hover table-striped table-condensed">
+            <div><h4 id="labelPump" style="color: #1b6101;" class="animated bounce infinite">PUMP</h4></div>
+            <table id="tablePump" class="table table-hover table-striped table-condensed">
               <thead style="background-color: #1b6101;">
                 <!-- <tr><th colspan="5" style="background-color: white; color: #1b6101;" class="text-center display-4">PUMP</th></tr> -->
                 <tr>
@@ -90,8 +91,8 @@
                 </tr>
               </tbody>
             </table>
-            <div><h4 style="color: #1b6101;">SENSOR NODE</h4></div>
-            <table class="table table-hover table-striped table-condensed">
+            <div><h4 id="labelSensor" style="color: #1b6101;">SENSOR</h4></div>
+            <table id="tableSensor" class="table table-hover table-striped table-condensed">
               <thead style="background-color: #1b6101;">
                 <!-- <tr><th colspan="10" style="background-color: white; color: #1b6101;" class="text-center display-4">SENSOR NODE</th></tr> -->
                 <tr>
@@ -114,6 +115,25 @@
                   <td>{{data.soilMoisture}}</td>
                   <td>{{data.soilTemperature}}</td>
                 </tr>
+              </tbody>
+            </table>
+            <div><h4 id="labelIntrusion" style="color: #1b6101;">INTRUSION</h4></div>
+            <table id="tableIntrusion" class="table table-hover table-striped table-condensed">
+              <thead style="background-color: #1b6101;">
+                <!-- <tr><th colspan="10" style="background-color: white; color: #1b6101;" class="text-center display-4">SENSOR NODE</th></tr> -->
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Device Id</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Activation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr scope="row" *ngFor = "let data of historyDataIntrusion">
+                  <td>{{data.date}}</td>
+                  <td>{{data.device_eid}}</td>
+                  <td>{{data.location}}</td>
+                  <td>{{data.activation}}</td>
               </tbody>
             </table>
           </div> 
