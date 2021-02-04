@@ -76,7 +76,7 @@ liveSensorNodeData() {
             data.push(obj);
         }
         console.log(data);
-        (document.getElementById('nData') as HTMLHeadingElement).textContent = data[0].N;
+        (document.getElementById('nData') as HTMLHeadingElement).textContent = "2";
         (document.getElementById('pData') as HTMLHeadingElement).textContent = data[0].P;
         (document.getElementById('kData') as HTMLHeadingElement).textContent = data[0].K;
         (document.getElementById('sunlightData') as HTMLHeadingElement).textContent = data[0].light;
@@ -86,7 +86,7 @@ liveSensorNodeData() {
 
 //Check intrusion - Start//
 getIntrusionData() :Observable<any>{
-  return this.http.get("https://jsonplaceholder.typicode.com/posts")
+  return this.http.get("http://127.0.0.1:8000/intrusion/")
 }
 
 getNotifyBySms() :Observable<any>{
@@ -98,29 +98,33 @@ getNotifyByEmail() :Observable<any>{
 }
 
 intrusionData() {
+  let count = 0
   this.getIntrusionData().subscribe(
     (response)=>{   
         for (let i = response.length - 1; i >= 1; i--) {
             let obj = response[i];
-            this.intrusionDataArray.push(obj);
+            //console.log(obj.activation)
+            if(obj.activation == "on") {
+              count = count + 1;
+            }
         }
+        // this.intrusionDataArray.push(count);
         //let intruParam = 1;
-        let intruParam = this.intrusionDataArray[0].userId;
-        (document.getElementById('intruData') as HTMLHeadingElement).textContent = intruParam.toString();
-        if (intruParam == 1) {
+        // let intruParam = this.intrusionDataArray[0].userId;
+        (document.getElementById('intruData') as HTMLHeadingElement).textContent = count.toString();
 
-          this.getNotifyByEmail().subscribe(
-            (response)=>{console.log(response)},
-          ); 
+        // if (intruParam == 1) {
+
+        //   this.getNotifyByEmail().subscribe(
+        //     (response)=>{console.log(response)},
+        //   ); 
           
-        }
+        // }
     },
   ); 
 }
 //Check intrusion - End//
-
 //Get latest sensor data from API - End//
-
   helloWorld() {
     let data  = '';
     let API = "IgaaSTBKxllVLXKKJafcGrYXkdSiWUZR";
