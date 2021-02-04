@@ -56,7 +56,7 @@ export class DashboardComponent implements OnInit {
               data.push(obj);
           }
           (document.getElementById('humidityData') as HTMLHeadingElement).textContent = data[0].humidity;
-          (document.getElementById('tempData') as HTMLHeadingElement).textContent = data[0].temperature+"°";
+          (document.getElementById('tempData') as HTMLHeadingElement).textContent = data[0].temperature+"";
       },
     );
   }
@@ -184,7 +184,7 @@ fetch("http://dataservice.accuweather.com/forecasts/v1/daily/5day/"+loc_key[0]+"
 
     //(document.getElementById('actualTemperature') as HTMLImageElement).textContent = nums[0];
 
-    (document.getElementById('actualTemperature') as HTMLHeadingElement).textContent = nums[0].toFixed(0)+"°";
+    (document.getElementById('actualTemperature') as HTMLHeadingElement).textContent = nums[0].toFixed(0)+"";
 
     if (shortPhrase[0].indexOf("t-storm") != -1){
       (document.getElementById('weatherPic') as HTMLImageElement).src = '../../assets/thunderStorm.png';

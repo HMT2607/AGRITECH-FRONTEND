@@ -191,7 +191,7 @@ label #sidebar_btn:hover{
   margin-top: 60px;
   margin-right: 12px;
   background: rgba(34, 36, 42, 0.9);
-  border-radius: 40px;
+  /* border-radius: 40px; */
 }
 
 .table{

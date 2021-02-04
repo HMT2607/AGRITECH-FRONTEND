@@ -9,6 +9,7 @@ import { HistoryComponent } from './history/history.component';
 import { ManagecropComponent } from './managecrop/managecrop.component';
 import { DevicecontrollerComponent} from './devicecontroller/devicecontroller.component';
 import { LoginComponent } from "./login/login.component";
+import { AboutpageComponent } from "./aboutpage/aboutpage.component";
 
 const routes: Routes = [{
   path : '',
@@ -37,6 +38,9 @@ const routes: Routes = [{
 },{
   path : 'login',
   component : LoginComponent
+},{
+  path : 'about',
+  component : AboutpageComponent
 }
 ];
 
