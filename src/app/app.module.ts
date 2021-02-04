@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { AiSystemComponent } from './ai-system/ai-system.component';
 import { ChartsModule } from 'ng2-charts';
 import { RegisterPlantComponent } from './register-plant/register-plant.component';
+import { HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { RegisterPlantComponent } from './register-plant/register-plant.componen
     LoginComponent,
     AiSystemComponent,
     RegisterPlantComponent,
+    HarvestPlantComponent,
 
   ],
   imports: [

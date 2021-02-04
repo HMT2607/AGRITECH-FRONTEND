@@ -40,6 +40,7 @@
     <div class="content">
       <!-- main body -->
       <!-- =============================================================================== -->
+
       <div class="container" id="f">
         <form>
           <div class="form-group row">
@@ -65,19 +66,30 @@
             </div>
 
 
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-salad"></i></div>
+                </div>
+                <input type="number" class="form-control" #kg id="kg" placeholder="weigth">
+              </div>
+            </div>
+
+
           </div>
 
           <div class="form-group row">
             <div class="col-md-4"></div>
 
             <div class="col-md-4" id="but">
-              <button type="button" class="btn btn-light" (click)="post(name.value, date.value)">Submit</button>
+              <button type="button" class="btn btn-light" (click)="post(name.value, date.value, kg.value)">Submit</button>
             </div>
 
             <div class="col-md-4"></div>
           </div>
         </form>
       </div>
+
       <!-- =============================================================================== -->
 
     </div>

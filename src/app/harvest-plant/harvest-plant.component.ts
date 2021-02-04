@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-register-plant',
-  templateUrl: './register-plant.component.html',
-  styleUrls: ['./register-plant.component.css']
+  selector: 'app-harvest-plant',
+  templateUrl: './harvest-plant.component.html',
+  styleUrls: ['./harvest-plant.component.css']
 })
-export class RegisterPlantComponent implements OnInit {
+export class HarvestPlantComponent implements OnInit {
 
   constructor() { }
 
@@ -13,23 +13,21 @@ export class RegisterPlantComponent implements OnInit {
   }
 
 
+  post(name:string, date:string, kg:string){
 
-  post(name:string, date:string){
-
-    var name1 = name;
     var date1 = new Date(date);
     date = date1.toLocaleDateString()
     alert(date1.toLocaleDateString());
 
 
 
-  fetch('http://127.0.0.1:8000/registerPlant/', {
+  fetch('http://127.0.0.1:8000/harvestPlant/', {
   method: 'post',
   headers: {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({plant: name, date: date, is_active: 1})
+  body: JSON.stringify({plant: name, date: date, weight: kg, is_active: 1})
 }).then(res=>res.json())
   .then(res => console.log(res));
 
@@ -37,3 +35,4 @@ export class RegisterPlantComponent implements OnInit {
   }
 
 }
+
