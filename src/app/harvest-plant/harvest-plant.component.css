@@ -350,7 +350,7 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 3200px;
+    height: 3400px;
     /* background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-size: cover;
     height: 75vw; */
@@ -392,7 +392,7 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 3000px;
+    height: 3200px;
   }
 
   .sidebar{
@@ -406,7 +406,7 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 600vw;
+    height: 650vw;
   }
   .sidebar{
     left: -185px;
@@ -419,13 +419,33 @@ label #sidebar_btn:hover{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 650vw;
+    height: 720vw;
   }
   .sidebar{
     left: -185px;
     height: calc(100% - 7%);
   }
 }
+/* @media only screen and (max-width: 360px) {
+  .sidebar{
+    height: calc(100% - 7%);
+  }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
 
 #f{
   margin-top: 15%;

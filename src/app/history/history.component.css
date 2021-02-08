@@ -198,6 +198,15 @@ table thead tr th{
   color: white;
 }
 
+.tablePumpClass, .labelPumpClass, .labelSensorClass, .tableSensorClass, .tableIntrusionClass, .labelIntrusionClass{
+  display: none;
+}
+
+.addTablePumpClass, .addLabelPumpClass, .addlabelSensorClass, .addtableSensorClass, .addTableIntrusionClass{
+  display: inline-table;
+}
+
+
 @media only screen and (max-width: 1024px) {
   body {
     margin: 0;

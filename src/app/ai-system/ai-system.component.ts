@@ -13,6 +13,8 @@
 import { formatDate } from '@angular/common';
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { state } from '@angular/animations';
 
 
 declare function test(): void;
@@ -23,12 +25,13 @@ declare function test(): void;
   styleUrls: ['./ai-system.component.css']
 })
 export class AiSystemComponent implements OnInit {
+  stateArray:Array<any> = [];
 
   ngOnInit(): void {
     this.test()
   }
 
-  constructor() {
+  constructor(private httpCLient: HttpClient) {
 
     // test();
   }
@@ -213,8 +216,23 @@ export class AiSystemComponent implements OnInit {
     // {data: optimalValue, label: 'Optimal values'},
     // {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series C'}]
 
+    let act;
+    // let state:number[]=[];
+    this.httpCLient.get<any>('http://127.0.0.1:8000/registerPlant/').subscribe(
+    response =>{
+      //console.log(response);
+      let x = response;
+    for (var data of x) {
+      //console.log(data.Temperature);
+      this.stateArray.push(data.date);
+      }
+      // return state[state.length-1];
+      act = this.stateArray[this.stateArray.length-1]
+
+    });
 
 
+    console.log(act)
 
 
     //==========================================================================================
@@ -233,6 +251,7 @@ export class AiSystemComponent implements OnInit {
       var tempVar = 0;
       var i = 0;
       var j = 0;
+
 
       for (var data of x) {
 

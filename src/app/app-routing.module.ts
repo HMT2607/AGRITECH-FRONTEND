@@ -11,6 +11,7 @@ import { DevicecontrollerComponent} from './devicecontroller/devicecontroller.co
 import { LoginComponent } from "./login/login.component";
 import { RegisterPlantComponent } from './register-plant/register-plant.component';
 import {HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
+import { AboutpageComponent } from "./aboutpage/aboutpage.component";
 
 const routes: Routes = [{
   path : '',
@@ -45,6 +46,9 @@ const routes: Routes = [{
 },{
   path : 'harvestPlant',
   component : HarvestPlantComponent
+},{
+  path : 'about',
+  component : AboutpageComponent
 }
 ];
 

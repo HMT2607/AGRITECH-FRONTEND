@@ -30,10 +30,11 @@
       <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
       <a href="http://localhost:4200/manageCrop"><i class="fas fa-th"></i><span>Crop Management</span></a>
       <a href="http://localhost:4200/controlDevice"><i class="fas fa-cogs"></i><span>Device Management</span></a>
-      <a href="http://localhost:4200/history"><i class="fas fa-table"></i><span>History</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+      <a href="http://localhost:4200/history?history=true"><i class="fas fa-table"></i><span>History</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Artificial Intelligence</span></a>
+      <a href="http://localhost:4200/#"><i class="fas fa-info-circle"></i><span>Register Plant</span></a>
+      <a href="http://localhost:4200/#"><i class="fas fa-sliders-h"></i><span>Harvest Plant</span></a>
+      <a href="http://localhost:4200/about"><i class="fas fa-info-circle"></i><span>About</span></a>
     </div>
     <!-- sidebar -->
 
@@ -60,7 +61,7 @@
 
             <div class="card-footer">
               <h5 class="a-mod">
-                <a href="http://localhost:4200/humidityDetails" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=humTemp" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
@@ -86,7 +87,7 @@
 
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=humTemp" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
@@ -94,6 +95,29 @@
         </div>
 
 
+
+
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img id="weatherPic" class="dashboardpng" src="../../assets/sun.png"/>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="actualTemperature">00</h3>
+                <h6>Weather</h6>
+              </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <h5>
+                <a href="http://localhost:4200/forecast" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+              </h5>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-3">
 
@@ -101,25 +125,22 @@
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col">
-                  <i class="fas fa-sun fa-4x" id="sunlight"></i>
+                  <img class="dashboardpng" src="../../assets/intruder.png"/>
                 </div>
               <div class="col">
-                <h3 class="display-3" id="sunlightData"></h3>
-                <h6>Sun light</h6>
+                <h3 class="display-3" id="intruData">00</h3>
+                <h6>Count</h6>
               </div>
               </div>
             </div>
 
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=ICount" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
-
         </div>
-
-
 
         <div class="col-md-3">
 
@@ -138,7 +159,7 @@
 
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=npk" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
@@ -162,7 +183,7 @@
 
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=npk" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
@@ -186,61 +207,7 @@
 
             <div class="card-footer">
               <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
-              </h5>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="col-md-3">
-
-          <div class="card">
-            <div class="card-header">
-              <div class="row align-items-center">
-                <div class="col">
-                  <img class="dashboardpng" src="../../assets/intruder.png"/>
-                </div>
-              <div class="col">
-                <h3 class="display-3" id="intruData">00</h3>
-                <h6>Intrusion Alert</h6>
-              </div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <h5>
-                <a href="#" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
-              </h5>
-            </div>
-          </div>
-
-        </div>
-
-
-
-
-
-
-        <div class="col-md-3">
-
-          <div class="card">
-            <div class="card-header">
-              <div class="row align-items-center">
-                <div class="col">
-                  <img id="weatherPic" class="dashboardpng" src="../../assets/sun.png"/>
-                </div>
-              <div class="col">
-                <h3 class="display-3" id="actualTemperature">00</h3>
-                <h6>AccuWeather</h6>
-              </div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <h5>
-                <a href="http://localhost:4200/forecast" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
+                <a href="http://localhost:4200/history?param=npk" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
@@ -251,7 +218,6 @@
 
 
         <div class="col-md-3">
-
           <div class="card">
             <div class="card-header">
               <div class="row align-items-center">
@@ -264,17 +230,37 @@
               </div>
               </div>
             </div>
-
             <div class="card-footer">
               <h5>
                 <a href="http://localhost:4200/ai-system" class="text-p">View Details <i class="fas fa-angle-right"></i></a>
               </h5>
             </div>
           </div>
-
         </div>
 
+        <div class="col-md-3">
 
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <i class="fas fa-sun fa-4x" id="sunlight"></i>
+                </div>
+              <div class="col">
+                <h3 class="display-3" id="sunlightData"></h3>
+                <h6>Sunlight Exposure</h6>
+              </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <h5>
+                <h5 class="text-p">Hours Duration</h5>
+              </h5>
+            </div>
+          </div>
+
+        </div>
 
 
       </div>

@@ -17,6 +17,7 @@ import { AiSystemComponent } from './ai-system/ai-system.component';
 import { ChartsModule } from 'ng2-charts';
 import { RegisterPlantComponent } from './register-plant/register-plant.component';
 import { HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
     AiSystemComponent,
     RegisterPlantComponent,
     HarvestPlantComponent,
+    AboutpageComponent,
 
   ],
   imports: [
