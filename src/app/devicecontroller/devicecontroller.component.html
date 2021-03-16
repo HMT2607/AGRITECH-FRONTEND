@@ -123,7 +123,7 @@
               <div class="well cropCard">
                 <h4>Water Pump</h4>
                 <label class="switch">
-                  <input (click)="switchToggle()" type="checkbox" checked>
+                  <input (change)="switchWaterPump($event)" type="checkbox" id="chckWaterpump">
                   <span class="slider round"></span>
                   </label>
               </div>
@@ -136,7 +136,7 @@
                     </div> -->
 
                     <label class="switch">
-                    <input (click)="switchToggle()" type="checkbox" checked>
+                    <input (change)="switchFertilizerPump($event)" type="checkbox" id="chckFertilizer">
                     <span class="slider round"></span>
                     </label>
               </div>
@@ -145,7 +145,7 @@
               <div class="well cropCard">
                 <h4>Alarm</h4>
                   <label class="switch">
-                    <input (click)="switchToggle()" type="checkbox" checked>
+                    <input (change)="switchAlarm($event)" type="checkbox" id="chckAlarm">
                     <span class="slider round"></span>
                     </label>
               </div>

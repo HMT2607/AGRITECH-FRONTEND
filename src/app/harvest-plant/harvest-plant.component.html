@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- SCRIPTS -->
+    <script src="../js/accuweather.js"></script>
+    <!-- SCRIPTS -->
+
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left-area">
+        <h3>Agri<span style="color:#1b6101">Tech</span></h3>
+      </div>
+      <div class="right-area">
+        <a href="#" (click)="logout()" class="logout_btn">Logout</a>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="profile_info">
+        <img src="https://www.teratrees.com/blog/wp-content/uploads/2018/07/Summer-tree.jpg" alt="" class="profile_image">
+      </div>
+      <a href="http://localhost:4200/"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+      <a href="http://localhost:4200/manageCrop"><i class="fas fa-th"></i><span>Crop Management</span></a>
+      <a href="http://localhost:4200/controlDevice"><i class="fas fa-cogs"></i><span>Device Management</span></a>
+      <a href="http://localhost:4200/history?history=true"><i class="fas fa-table"></i><span>History</span></a>
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Artificial Intelligence</span></a>
+      <a href="http://localhost:4200/#"><i class="fas fa-info-circle"></i><span>Register Plant</span></a>
+      <a href="http://localhost:4200/#"><i class="fas fa-sliders-h"></i><span>Harvest Plant</span></a>
+      <a href="http://localhost:4200/about"><i class="fas fa-info-circle"></i><span>About</span></a>
+    </div>
+    <!-- sidebar -->
+
+    <div class="content">
+      <!-- main body -->
+      <!-- =============================================================================== -->
+
+      <div class="container" id="f">
+        <form>
+          <div class="form-group row">
+
+
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-tree-alt"></i></div>
+                </div>
+                <input type="text" class="form-control" #name id="name" placeholder="Crop Name">
+              </div>
+            </div>
+
+
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-calendar-day"></i></div>
+                </div>
+                <input type="date" class="form-control" #date id="date" placeholder="Date">
+              </div>
+            </div>
+
+
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-salad"></i></div>
+                </div>
+                <input type="number" class="form-control" #kg id="kg" placeholder="weigth">
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4" id="but">
+              <button type="button" class="btn btn-light" (click)="post(name.value, date.value, kg.value)">Submit</button>
+            </div>
+
+            <div class="col-md-4"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- =============================================================================== -->
+
+    </div>
+  </body>
+</html>

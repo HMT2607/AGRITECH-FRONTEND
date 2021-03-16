@@ -12,7 +12,7 @@ body{
     /* background-position: center; */
   background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
   background-size: cover;
-  height: 225vw;
+  height: 75vw;
 }
 
 header{
@@ -447,43 +447,39 @@ label #sidebar_btn:hover{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {} */
 
-/* #graph{
-  background-color: white;
-  margin-top: 50px;
+#f{
+  margin-top: 15%;
+  background-color:rgba(120, 127, 127, 0.7);
+  width: 630px;
+  height: 300px;
+  padding-inline:50px;
+  padding-top: 100px;
+  border-radius: 40px;
+}
+
+#but{
+
+  padding-inline: 62px;
+}
+
+
+/* @media only screen and (max-width: 360px) {
+  .sidebar{
+    height: calc(100% - 7%);
+  }
 } */
 
-#graph2{
-  background-color:rgba(220, 224, 221, 0.85);
-  margin-top: 50px;
-}
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
 
-#graph3{
-  background-color: rgba(220, 224, 221, 0.85);
-  margin-top: 30px;
-}
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
 
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
 
-#graph4{
-  background-color: rgba(220, 224, 221, 0.85);
-  margin-top: 30px;
-}
-
-#graph5{
-  background-color: rgba(220, 224, 221, 0.85);
-  margin-top: 30px;
-}
-
-#graph6{
-  background-color: rgba(220, 224, 221, 0.85);
-  margin-top: 30px;
-}
-
-#graph7{
-  background-color: rgba(220, 224, 221, 0.85);
-  margin-top: 30px;
-}
-
-#tip{
-  margin-top: 50px;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */

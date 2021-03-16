@@ -9,6 +9,8 @@ import { HistoryComponent } from './history/history.component';
 import { ManagecropComponent } from './managecrop/managecrop.component';
 import { DevicecontrollerComponent} from './devicecontroller/devicecontroller.component';
 import { LoginComponent } from "./login/login.component";
+import { RegisterPlantComponent } from './register-plant/register-plant.component';
+import {HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
 import { AboutpageComponent } from "./aboutpage/aboutpage.component";
 
 const routes: Routes = [{
@@ -39,6 +41,12 @@ const routes: Routes = [{
   path : 'login',
   component : LoginComponent
 },{
+  path : 'registerPlant',
+  component : RegisterPlantComponent
+},{
+  path : 'harvestPlant',
+  component : HarvestPlantComponent
+},{
   path : 'about',
   component : AboutpageComponent
 }
@@ -50,4 +58,4 @@ const routes: Routes = [{
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [DashboardComponent, AddDevicesComponent, LoginComponent, HumidityDetailsComponent, ForecastComponent, AiSystemComponent]
+export const routingComponents = [DashboardComponent, AddDevicesComponent, LoginComponent, HumidityDetailsComponent, ForecastComponent, AiSystemComponent, RegisterPlantComponent, HarvestPlantComponent]

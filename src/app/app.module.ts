@@ -14,6 +14,9 @@ import { DevicecontrollerComponent } from './devicecontroller/devicecontroller.c
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { AiSystemComponent } from './ai-system/ai-system.component';
+import { ChartsModule } from 'ng2-charts';
+import { RegisterPlantComponent } from './register-plant/register-plant.component';
+import { HarvestPlantComponent } from './harvest-plant/harvest-plant.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 
 
@@ -28,11 +31,14 @@ import { AboutpageComponent } from './aboutpage/aboutpage.component';
     DevicecontrollerComponent,
     LoginComponent,
     AiSystemComponent,
+    RegisterPlantComponent,
+    HarvestPlantComponent,
     AboutpageComponent,
 
   ],
   imports: [
     BrowserModule,
+    ChartsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
