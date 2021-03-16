@@ -8,7 +8,7 @@ export class D5forecast{
   constructor(
       public date:string,
       public weather:string,
-      public temperature:number
+      public temperature:string
 
   ){}
 }
@@ -245,11 +245,11 @@ table(){
       nums2[4] = ((nums2[4] - 32) *5/9);
       nums[4] = (nums[4] + nums2[4])/2;
 
-      this.d5forecast = [{date:date[0], weather:shortPhrase[0], temperature:nums[0]},
-                          {date:date[1], weather:shortPhrase[1], temperature:nums[1]},
-                          {date:date[2], weather:shortPhrase[2], temperature:nums[2]},
-                          {date:date[3], weather:shortPhrase[3], temperature:nums[3]},
-                          {date:date[4], weather:shortPhrase[4], temperature:nums[4]}]
+      this.d5forecast = [{date:date[0].substring(0, 10) + " " + date[0].substring(11, 16), weather:shortPhrase[0], temperature:nums[0].toFixed(2)},
+                          {date:date[1].substring(0, 10) + " " + date[1].substring(11, 16), weather:shortPhrase[1], temperature:nums[1].toFixed(2)},
+                          {date:date[2].substring(0, 10) + " " + date[2].substring(11, 16), weather:shortPhrase[2], temperature:nums[2].toFixed(2)},
+                          {date:date[3].substring(0, 10) + " " + date[3].substring(11, 16), weather:shortPhrase[3], temperature:nums[3].toFixed(2)},
+                          {date:date[4].substring(0, 10) + " " + date[4].substring(11, 16), weather:shortPhrase[4], temperature:nums[4].toFixed(2)}]
     }
   );
 }

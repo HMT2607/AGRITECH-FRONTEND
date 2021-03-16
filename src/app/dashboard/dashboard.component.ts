@@ -104,7 +104,7 @@ intrusionData() {
         for (let i = response.length - 1; i >= 1; i--) {
             let obj = response[i];
             //console.log(obj.activation)
-            if(obj.activation == "on") {
+            if(obj.activation == "true") {
               count = count + 1;
             }
         }

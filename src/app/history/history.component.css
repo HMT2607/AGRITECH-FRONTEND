@@ -12,10 +12,11 @@ body{
   background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
   background-position: center;
   background-size: cover;
+  height: max-content;
 }
 
 header{
-  /* position:fixed; */
+  position:fixed;
   /* background: #22242A; */
   background: rgba(34, 36, 42, 0.4);
   padding: 20px;
@@ -52,7 +53,7 @@ header{
 
 
 .logout_btn:hover{
-  background: #32ad03;
+  background: #6AEA81;
 }
 
 
@@ -66,7 +67,7 @@ header{
   position: fixed;
   left: 0;
   width: 250px;
-  height: calc(100% - 7%);
+  height: calc(94% - 7%);
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
@@ -188,7 +189,7 @@ label #sidebar_btn:hover{
 
 
 #Htable{
-  margin-top: 60px;
+  margin-top: 130px;
   margin-right: 12px;
   /* background: rgba(34, 36, 42, 0.4); */
   border-radius: 40px;
@@ -206,6 +207,19 @@ table thead tr th{
   display: inline-table;
 }
 
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 617px;
+  /* left: 10px; */
+  width: calc(100% - 0%);
+  height: 25px;
+  margin-left: -10px;
+}
+
+.copyrightFont{
+  /* margin-top: 1vw; */
+  color: white;
+}
 
 @media only screen and (max-width: 1024px) {
   body {
@@ -221,7 +235,23 @@ table thead tr th{
 .content{
 margin-left: 60px;
 }
- 
+.sidebar{
+  height: calc(96.5% - 7%);
+}
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 756px;
+  /* left: 10px; */
+  width: calc(100% - 0%);
+  height: 25px;
+  margin-left: -10px;
+}
+
+/* .copyrightFont{
+  margin-top: 1vw;
+  color: #6AEA81;
+} */
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -261,7 +291,23 @@ display: none;
 
 #check{
 display: none;
-}    
+}   
+.sidebar{
+  height: calc(98.5% - 7%);
+}
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 1017px;
+  /* left: 10px; */
+  width: calc(100% - 0%);
+  height: 25px;
+  margin-left: -10px;
+} 
+.copyrightFont{
+  margin-left: -180px;
+  font-size: large;
+}
+
 }
 
 @media only screen and (max-width: 731px) {

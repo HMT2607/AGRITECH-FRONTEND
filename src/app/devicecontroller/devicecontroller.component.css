@@ -12,7 +12,7 @@ body{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 700px;
+    height: auto;
   }
   
   header{
@@ -53,7 +53,7 @@ body{
   
   
   .logout_btn:hover{
-    background: #32ad03;
+    background: #6AEA81;
   }
   
   
@@ -67,7 +67,7 @@ body{
     position: fixed;
     left: 0;
     width: 250px;
-    height: calc(100% - 7%);
+    height: calc(94% - 7%);
     transition: 0.5s;
     transition-property: left;
     overflow-y: auto;
@@ -223,13 +223,28 @@ body{
 
   p{
       color: rgb(143, 126, 14);
-      font-weight: bold;
+      /* font-weight: bold; */
   }
 
   h4{
       color: #1b6101;
       -webkit-text-stroke-width: 0.5px;
       -webkit-text-stroke-color: #1b6101;
+  }
+
+  .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 617px;
+    /* left: 10px; */
+    width: calc(100% - 0%);
+    height: 25px;
+    margin-left: -10px;
+    padding-left: -170px;
+  }
+  
+  .copyrightFont{
+    /* margin-top: 1vw; */
+    color: white;
   }
   
   @media only screen and (max-width: 1024px) {
@@ -240,7 +255,20 @@ body{
       background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
       background-position: center;
       background-size: cover;
-      height: 79vw;
+      height: auto;
+    }
+
+    .site-footer{
+      background-color: rgb(34, 36, 42, 0.4);
+      position: fixed;top: 757px;
+      /* left: 10px; */
+      width: calc(100% - 0%);
+      height: 25px;
+      margin-left: -10px;
+    }
+    .sidebar{
+      height: calc(96.5% - 7%);
+      transition: 0.5s;
     }
    
   }
@@ -253,7 +281,7 @@ body{
       background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
       background-position: center;
       background-size: cover;
-      height: auto;
+      /* height: auto; */
     }
   
   
@@ -283,6 +311,32 @@ body{
   #check{
   display: none;
   }    
+  /* .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 757px;
+    width: calc(100% - 0%);
+    height: 25px;
+    margin-left: -10px;
+  } */
+  .sidebar{
+    height: calc(97% - 7%);
+    transition: 0.5s;
+  }
+  .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 1000px;
+    /* left: 10px; */
+    width: calc(100% - 0%);
+    height: 25px;
+    margin-left: -10px;
+    padding-left: -170px;
+  }
+  
+  .copyrightFont{
+    margin-left: -100px;
+    color: white;
+  }
+
   }
 
   @media only screen and (max-width: 731px) {

@@ -12,6 +12,7 @@ body{
   background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
   background-position: center;
   background-size: cover;
+  height: auto;
 }
 
 header{
@@ -52,7 +53,7 @@ header{
 
 
 .logout_btn:hover{
-  background: #32ad03;
+  background: #6AEA81;
 }
 
 
@@ -66,7 +67,7 @@ header{
   position: fixed;
   left: 0;
   width: 250px;
-  height: calc(100% - 7%);
+  height: calc(94.2% - 7%);
   transition: 0.5s;
   transition-property: left;
   overflow-y: auto;
@@ -197,3 +198,55 @@ label #sidebar_btn:hover{
 .table{
   color: antiquewhite;
 }
+
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 633px;
+  /* left: 10px; */
+  width: calc(100% - 0%);
+  height: 25px;
+  margin-left: -10px;
+}
+
+.copyrightFont{
+  /* margin-top: 1vw; */
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 742px;
+  /* left: 10px; */
+  width: calc(100% - 0%);
+  height: 25px;
+  margin-left: -10px;
+}
+
+.copyrightFont{
+  /* margin-top: 1vw; */
+  color: white;
+}
+
+.sidebar{
+  height: calc(95.8% - 7%);
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 997px;
+    width: calc(100% - 0%);
+    height: 25px;
+    margin-left: -10px;
+  }
+  
+  .copyrightFont{
+    margin-left: -100px;
+  }
+  
+  .sidebar{
+    height: calc(98.5% - 7%);
+  }
+  }

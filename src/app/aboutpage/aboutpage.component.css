@@ -12,7 +12,7 @@ body{
     background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-    height: 700px;
+    height: auto;
   }
   
   header{
@@ -53,21 +53,20 @@ body{
   
   
   .logout_btn:hover{
-    background: #32ad03;
+    background: #6AEA81;
   }
   
   
   .sidebar{
     z-index: 1;
     top: 0;
-    /* background: #2F323A; */
     background: rgba(34, 36, 42, 0.4);
     margin-top: 60px;
     padding-top: 30px;
     position: fixed;
     left: 0;
     width: 250px;
-    height: calc(100% - 7%);
+    height: calc(94.5% - 7%);
     transition: 0.5s;
     transition-property: left;
     overflow-y: auto;
@@ -135,13 +134,8 @@ body{
   
   .content{
     width: (100% - 250px);
-    /* margin-top: 60px; */
     padding: 20px;
     margin-left: 460px;
-    /* background: url(https://harelmallac-my.sharepoint.com/personal/minoushkaj_harelmallac_com/Documents/Microsoft%20Teams%20Chat%20Files/060420-farm-agriculture-fieldsadobestock_303214121.jpeg) no-repeat;
-    background-position: center;
-    background-size: cover; */
-    /* background-attachment: fixed; */
     height: 100vh;
     transition: 0.5s;
   }
@@ -219,7 +213,7 @@ body{
   
   .cropCard{
           background: rgba(255, 255, 255, 0.55);
-          height: 20vw;
+          height: 23vw;
   }
 
   /* p{
@@ -238,27 +232,55 @@ body{
       margin-left: -200px;
   }
 
-
-  @media only screen and (max-width: 1024px) {
-    body {
-      margin: 0;
-      padding: 0;
-      font-family:"Roboto", sans-serif;
-      background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 79vw;
-    }
-
-    .cropCard{
-      background: rgba(255, 255, 255, 0.55);
-      height: 28vw;
+  .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 635px;
+    margin-left: -19px;
+    padding-left: 80px;
+    width: calc(100% - 0%);
 }
 
-    .aboutText{
-      font-size: larger;
-    }
-   
+.copyrightFont{
+    /* margin-top: 1vw; */
+    color: white;
+}
+
+
+  @media only screen and (max-width: 1024px) {
+body {
+  margin: 0;
+  padding: 0;
+  font-family:"Roboto", sans-serif;
+  background: url(https://images.hdqwalls.com/download/green-horizon-hd-2560x1440.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+
+.cropCard{
+  background: rgba(255, 255, 255, 0.55);
+  height: 35vw;
+}
+.sidebar{
+  height: calc(96.2% - 7%);
+}
+
+.aboutText{
+  font-size: larger;
+}
+.site-footer{
+  background-color: rgb(34, 36, 42, 0.4);
+  position: fixed;top: 745px;
+  margin-left: -19px;
+  /* padding-left: 80px; */
+  width: calc(101% - 0%);
+}
+  
+.copyrightFont{
+      /* margin-top: 1vw; */
+    color: white;
+}
+
   }
 
   @media only screen and (max-width: 768px) {
@@ -272,17 +294,15 @@ body{
       height: auto;
     }
 
-    .cropCard{
-      background: rgba(255, 255, 255, 0.55);
-      height: 45vw;
-      margin-left: -9vw;
-    }
+.cropCard{
+  background: rgba(255, 255, 255, 0.55);
+  height: 45vw;
+  margin-left: -9vw;
+}
 
-    .aboutText{
-      font-size: x-large;
-    }
-  
-  
+.aboutText{
+  font-size: x-large;
+}
   .sidebar{
   left: -185px;
   height: 1000px;
@@ -308,7 +328,22 @@ body{
   
   #check{
   display: none;
-  }    
+  } 
+  .sidebar{
+    height: calc(98.5% - 7%);
+  }
+
+  .site-footer{
+    /* background-color: rgb(34, 36, 42, 0.4); */
+    position: fixed;top: 997px;
+    /* margin-left: -59px; */
+    /* width: calc(125% - 0%); */
+  }
+    
+.copyrightFont{
+    /* color: white; */
+    margin-left: -125px;
+}  
   }
 
   @media only screen and (max-width: 731px) {
@@ -347,14 +382,27 @@ body{
       margin-left: 140px;
       }
 
-      .display-2{
-        font-size: x-large;
-      }
+    .display-2{
+      font-size: x-large;
+    }
 
-      .cropCard{
-        background: rgba(255, 255, 255, 0.55);
-        height: 35vw;
+    .cropCard{
+      background: rgba(255, 255, 255, 0.55);
+      height: 43vw;
   }
+
+  .sidebar{
+    height: calc(84.5% - 7%);
+  }
+
+  .site-footer{
+    background-color: rgb(34, 36, 42, 0.4);
+    position: fixed;top: 339px;
+    /* width: 1350px;
+    height: 25px; */
+    margin-left: -12px;
+    padding-left: 335px;
+}
   }
 
 
@@ -390,8 +438,22 @@ body{
 
     .cropCard{
       background: rgba(255, 255, 255, 0.55);
-      height: 85vw;
+      height: 110vw;
 }
+
+    .sidebar{
+      left: -185px;
+      height: calc(94% - 7%);
+    }
+
+    .site-footer{
+      background-color: rgb(34, 36, 42, 0.4);
+      position: fixed;top: 617px;
+      /* width: 1350px;
+      height: 25px; */
+      margin-left: -19px;
+      padding-left: 80px;
+  }
   }
   /* @media only screen and (max-width: 700px) {
     body {
